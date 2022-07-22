@@ -1,11 +1,11 @@
 package src.exercicio1.estrutura.vinculosEmpregaticios;
 
-import src.exercicio1.metodos.calculo.ReembolsoDespesas;
+import src.exercicio1.metodos.calculo.CalculadoraReembolsoDespesas;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class Coordenador extends Funcionario implements ReembolsoDespesas {
+public class Coordenador extends Funcionario implements CalculadoraReembolsoDespesas {
     private Set<Professor> professoresSupervisionados = new HashSet<>();
 
     public Coordenador() {

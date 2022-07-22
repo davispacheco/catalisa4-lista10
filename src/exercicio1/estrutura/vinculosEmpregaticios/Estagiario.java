@@ -1,8 +1,8 @@
 package src.exercicio1.estrutura.vinculosEmpregaticios;
 
-import src.exercicio1.metodos.calculo.ReembolsoDespesas;
+import src.exercicio1.metodos.calculo.CalculadoraReembolsoDespesas;
 
-public class Estagiario extends Empregado implements ReembolsoDespesas {
+public class Estagiario extends Empregado implements CalculadoraReembolsoDespesas {
     private double bolsa;
 
     public Estagiario() {
