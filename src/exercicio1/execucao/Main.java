@@ -20,15 +20,23 @@ public class Main {
         coordenador.setNumeroDeRegistro("321123");
         coordenador.setOrgaoDeLotacao("Órgão 01");
         coordenador.setSalario(2000);
-        adicaoProfessorSupervisionado.adicionarProfessorSupervisionado(coordenador, p1);
         System.out.println("Nome do coordenador: " + coordenador.getNome());
         System.out.println("CPF do coordenador: " + coordenador.getCpf());
         System.out.println("Número de registro: " + coordenador.getNumeroDeRegistro());
         System.out.println("Órgão de lotação: " + coordenador.getOrgaoDeLotacao());
         System.out.println("Salário do coordenador: " + coordenador.getSalario());
+        if (adicaoProfessorSupervisionado.adicionarProfessorSupervisionado(coordenador, p1)) {
+            System.out.println("Professor adicionado com sucesso!");
+        } else {
+            System.out.println("Limite de professores supervisionados excedido.");
+        }
         System.out.println("Professores supervisionados: " + coordenador.getProfessoresSupervisionados().size());
         Professor p2 = new Professor();
-        adicaoProfessorSupervisionado.adicionarProfessorSupervisionado(coordenador, p2);
+        if (adicaoProfessorSupervisionado.adicionarProfessorSupervisionado(coordenador, p2)) {
+            System.out.println("Professor adicionado com sucesso!");
+        } else {
+            System.out.println("Limite de professores supervisionados excedido.");
+        }
         System.out.println("Professores supervisionados: " + coordenador.getProfessoresSupervisionados().size());
         calculadoraSalario.calcularSalario(coordenador, 0.05);
         System.out.println("Novo salário do coordenador: " + coordenador.getSalario());
