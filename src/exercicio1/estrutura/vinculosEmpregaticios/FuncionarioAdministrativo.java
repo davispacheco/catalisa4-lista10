@@ -1,6 +1,6 @@
 package src.exercicio1.estrutura.vinculosEmpregaticios;
 
-import src.exercicio1.estrutura.ReembolsoDespesas;
+import src.exercicio1.metodos.calculo.ReembolsoDespesas;
 
 public class FuncionarioAdministrativo extends Funcionario implements ReembolsoDespesas {
     private String funcaoAdministrativa;

@@ -1,19 +1,15 @@
 package src.exercicio1.estrutura.vinculosEmpregaticios;
 
-import src.exercicio1.estrutura.ReembolsoDespesas;
+import src.exercicio1.metodos.calculo.ReembolsoDespesas;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class Coordenador extends Funcionario implements ReembolsoDespesas {
-    private int professoresSupervisionados;
+    private Set<Professor> professoresSupervisionados = new HashSet<>();
 
     public Coordenador() {
-        this.professoresSupervisionados = 0;
-    }
-
-    @Override
-    public void aumentoSalario() {
-        double percentual = 0.05;
-        double reajuste = getSalario() * percentual;
-        setSalario(getSalario() + reajuste);
+        this.professoresSupervisionados = professoresSupervisionados;
     }
 
     @Override
@@ -21,19 +17,12 @@ public class Coordenador extends Funcionario implements ReembolsoDespesas {
         System.out.println("Despesas do coordenador reembolsadas!");
     }
 
-    public void adicionaProfessor() {
-        if (professoresSupervisionados == 10) {
-            System.out.println("Limite de professores supervisionados excedido.");
-        } else {
-            professoresSupervisionados++;
-        }
-    }
-
-    public int getProfessoresSupervisionados() {
+    public Set<Professor> getProfessoresSupervisionados() {
         return professoresSupervisionados;
     }
 
-    public void setProfessoresSupervisionados(int professoresSupervisionados) {
+    public void setProfessoresSupervisionados(Set<Professor> professoresSupervisionados) {
         this.professoresSupervisionados = professoresSupervisionados;
     }
 }
+
