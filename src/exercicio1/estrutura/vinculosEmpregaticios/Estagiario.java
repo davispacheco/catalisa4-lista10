@@ -8,6 +8,8 @@ public class Estagiario extends Empregado implements CalculadoraReembolsoDespesa
     public Estagiario() {
         this.bolsa = bolsa;
     }
+
+    @Override
     public void reembolsarDespesas() {
         System.out.println("Despesas do estagiário reembolsadas!");
 

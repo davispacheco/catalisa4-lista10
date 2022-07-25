@@ -1,6 +1,6 @@
 package src.exercicio1.estrutura;
 
-public abstract class Pessoa implements Universidade {
+public abstract class Pessoa {
     private String nome;
     private String cpf;
 
